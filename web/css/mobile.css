@@ -1,0 +1,33 @@
+.mobile-control {
+    width: 25%;
+    height: 100%;
+    font-size: 24px;
+    border: none;
+    background-color: rgba(197, 197, 197, 0.5);
+}
+
+.left {
+    left: 10px;
+    bottom: 10px;
+}
+
+.right {
+    left: 80px;
+    bottom: 10px;
+}
+
+.jump {
+    right: 80px;
+    bottom: 10px;
+}
+
+.shoot {
+    right: 10px;
+    bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .mobile-control {
+        display: none;
+    }
+}

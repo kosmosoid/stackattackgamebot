@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #555555;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    vertical-align: center;
+    height: 28px;
+    font-size: 11px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    height: 20px;
+    font-size: 14px;
+    vertical-align: center;
+}
+
+footer a {
+    color: #9cf;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gameContainer {
+    position: relative;
+}
+
+canvas {
+    display: block;
+    border: 1px solid black;
+    background-size: cover;
+    background-position: center;
+}
+
+#gameInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: block;
+}
+#gameInfo h3 {
+    text-align: center;
+}
+#startButton {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    padding: 10px 20px;
+}
+#donateButton {
+    position: absolute;
+    bottom: 20px;
+    left: 30%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    padding: 10px 20px;
+}
