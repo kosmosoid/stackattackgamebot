@@ -1,0 +1,26 @@
+{
+  "name": "stackattackgamebot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kosmosoid/stackattackgamebot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/kosmosoid/stackattackgamebot/issues"
+  },
+  "homepage": "https://github.com/kosmosoid/stackattackgamebot#readme",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-terser": "^2.1.0"
+  },
+  "scripts": {
+    "build": "gulp"
+  }
+}

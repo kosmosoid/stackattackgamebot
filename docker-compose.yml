@@ -1,0 +1,46 @@
+services:
+  sa_bot_db:
+    container_name: sa_bot_db
+    image: postgres:14-alpine
+    ports:
+      - 5435:5432
+    environment:
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_NAME=${DB_NAME}
+      - DB_PORT=${DB_PORT}
+      - TZ=Europe/Belgrade
+      - PGTZ=Europe/Belgrade
+    restart: on-failure
+    volumes:
+      - sabotdb_data:/var/lib/postgresql/data
+      - ./dbshell:/docker-entrypoint-initdb.d/
+    networks:
+      - sabotnet
+
+  sa_bot_app:
+    container_name: sa_bot_app
+    restart: always
+    build: .
+    depends_on:
+      - sa_bot_db
+    # ports:
+    #   - ${HTTPS_PORT}:${HTTPS_PORT}
+    environment:
+      - POSTGRES_DSN=${POSTGRES_DSN}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - GIN_MODE=release
+      - TZ=Europe/Belgrade
+      - HTTPS_PORT=${HTTPS_PORT}
+      - APP_URL=${APP_URL}
+    networks:
+      - sabotnet
+
+volumes:
+  sabotdb_data:
+    driver: local
+
+networks:
+  sabotnet:
+    driver: bridge
