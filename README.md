@@ -15,7 +15,7 @@ A Telegram bot featuring the Super Stack Attack game - an exciting game accessib
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd statkbot
+cd stackattackgamebot
 ```
 
 2. Create environment variables file:
@@ -111,7 +111,7 @@ Telegram бот с игрой Super Stack Attack - увлекательная и
 1. Клонируйте репозиторий:
 ```bash
 git clone <repository-url>
-cd statkbot
+cd stackattackgamebot
 ```
 
 2. Создайте файл с переменными окружения:
